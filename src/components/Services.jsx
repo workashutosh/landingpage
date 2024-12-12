@@ -1,6 +1,11 @@
+import stockCashImage from '../images/stock_cash.webp';
+import stock_future from '../images/stock_future.webp';
+
+
+
 const serviceData1 = [
     {
-      imgSrc: "/services/stock_cash.webp",
+      imgSrc: stockCashImage,
       title: "STOCK CASH ADVICE",
       description: `This package is suitable for small and medium Investor, who look for cash market related Recommendation in Indian stock market.
         We will provide 1-2 Cash Recommendation every day.
@@ -9,7 +14,7 @@ const serviceData1 = [
         Timely Entry and Exit`,
     },
     {
-      imgSrc: "/services/stock_future.webp",
+      imgSrc: stock_future,
       title: "STOCK FUTURE ADVICE",
       description: `This package is suitable for small and medium Investor, who invest in Future and options segment in Indian stock market.
         We will provide 1-2 Stock future Recommendation every day.
@@ -21,7 +26,7 @@ const serviceData1 = [
 
   const serviceData2 = [
     {
-      imgSrc: "/services/stock_cash.webp",
+      imgSrc: stockCashImage,
       title: "NIFTY FUTURE ADVICE",
       description: `This package is suitable small and medium Investor, who want to invest in Nifty and Bank nifty futures.
                     We will provide you 3-4 Nifty and Bank Nifty Recommendation per week .
@@ -29,7 +34,7 @@ const serviceData1 = [
                     Timely Entry and Exit`,
     },
     {
-      imgSrc: "/services/stock_future.webp",
+      imgSrc: stock_future,
       title: "BANK NIFTY FUTURE ADVICE",
       description: `This package is suitable small and medium Investor, who want to invest in Nifty and Bank nifty futures.
                     We will provide you 3-4 Nifty and Bank Nifty Recommendation per week.
@@ -40,7 +45,7 @@ const serviceData1 = [
 
   const serviceData3 = [
     {
-      imgSrc: "/services/stock_cash.webp",
+      imgSrc: stockCashImage,
       title: "NIFTY OPTION ADVICE",
       description: `This package is suitable small and medium Investor, who want to invest in Nifty option and Bank nifty option.
                         We will provide you 3-4 Nifty and Bank Nifty Recommendation per week.
@@ -48,7 +53,7 @@ const serviceData1 = [
                         Timely Entry and Exit`,
     },
     {
-      imgSrc: "/services/stock_future.webp",
+      imgSrc: stock_future,
       title: "BANK NIFTY OPTION ADVICE",
       description: `This package is suitable small and medium Investor, who want to invest in Nifty option and Bank nifty option.
                     We will provide you 3-4 Nifty and Bank Nifty Recommendation per week.
@@ -59,7 +64,7 @@ const serviceData1 = [
 
   const serviceData4 = [
     {
-      imgSrc: "/services/stock_cash.webp",
+      imgSrc: stockCashImage,
       title: "STOCK OPTION ADVICE",
       description: `This package is suitable for the small and medium Investor, who look for Stock Option related Recommendation in Indian stock market.
                     We will provide 1-2 Option Recommendation every day.

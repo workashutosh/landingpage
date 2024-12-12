@@ -1,9 +1,13 @@
+import human from '../images/human.webp';
+
+
+
 const Happyclients = () => {
     return (
       <div className="relative">
         {/* Background Image with Overlay */}
         <div className="relative h-96">
-          <img src="/human.webp" alt="" className="object-cover w-full h-full" />
+          <img src={human} alt="" className="object-cover w-full h-full" />
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
   

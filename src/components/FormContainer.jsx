@@ -1,4 +1,8 @@
 import BookingForm from './Bookingform'; // Assuming this is imported from the correct path
+import bg from '../images/bg.webp';
+import Growth from '../images/Growth.webp';
+
+
 
 const BookingOverlay = () => {
   return (
@@ -7,7 +11,7 @@ const BookingOverlay = () => {
   <div 
     className="absolute inset-0 bg-cover bg-center z-0" 
     style={{
-      backgroundImage: 'url(/bg.webp)',
+      backgroundImage: `url(${bg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}
@@ -18,7 +22,7 @@ const BookingOverlay = () => {
     className="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-5"
   />
   
-  <div className="relative z-10 w-full max-w-6xl px-4 flex flex-col md:flex-row gap-4">
+  <div className="relative z-10 w-full max-w-6xl px-2 flex flex-col md:flex-row gap-4">
     {/* Left Overlay Div */}
     <div className="w-full md:w-1/2 p-4 rounded-lg">
       <BookingForm />
@@ -42,7 +46,7 @@ const BookingOverlay = () => {
           <li>Get Daily basis Recommendation via SMS Server</li>
         </ul>
       </div>
-      <img src="/Growth.webp" alt="" className='w-[230px]' />
+      <img src={Growth} alt="" className='w-[230px]' />
     </div>
   </div>
 </div>
