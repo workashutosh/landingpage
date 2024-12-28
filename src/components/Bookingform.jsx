@@ -98,7 +98,7 @@ const BookingForm = () => {
     const nameRegex = /^[A-Za-z\s]+$/;
 
     // Regex for phone - allows only numbers and ensures a valid phone format (starts with +91)
-    const phoneRegex = /^\+91\d{10}$/;
+    const phoneRegex = /^\d{10}$/;
 
     if (name === "phone") {
       setFormData({
@@ -146,20 +146,39 @@ const BookingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = {};
-
+  
     if (!formData.fullName) validationErrors.fullNameError = 'Full name is required';
-    if (!formData.phone || !/^\+91\d{10}$/.test(formData.phone)) validationErrors.phoneError = 'Phone number is required and should be valid';
+    if (!formData.phone || !/^\d{10}$/.test(formData.phone)) validationErrors.phoneError = 'Phone number is required and should be valid';
     if (!formData.state) validationErrors.stateError = 'State is required';
     if (!formData.segment) validationErrors.segmentError = 'Segment is required';
     if (!formData.investment) validationErrors.investmentError = 'Investment is required';
     if (!formData.language) validationErrors.languageError = 'Language is required';
-
+  
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log('Form submitted:', formData);
+      //console.log('Form submitted:', formData);
+  
+      fetch('https://twmresearchalert.com/subdomain/gateway/registrationget.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then(response => {
+          if (response.status === 200) {
+            window.location.replace('https://twmresearchalert.com/landingpage/thank-you/');
+          }
+          return response.json();
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
     }
-  };
+};
+  
+  
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto p-3 bg-white shadow-md rounded-md space-y-4">
